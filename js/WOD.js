@@ -1,43 +1,7 @@
 "use strict";
 
-let cardio = [""];
 
-let abs = ["Crunches", "Side Plank Pulses", "Vertical Mountain Climbers",
-            "Flutter Kicks", "V-Ups", "Leg Raises", "Toe Taps",
-            ""];
-
-let glutes = ["Squats", "Glute Bridges", "Donkey Kicks", "Curtsy Lunges",
-                "Clamshells", "Fire Hydrant", "Single Leg Deadlift",
-                "Reverse Lunges", "Side Lunges", "Hip Abduction"];
-
-let legs = [""];
-
-// Shuffle array
-const shuffled = glutes.sort(() => 0.5 - Math.random());
-
-// Get sub-array of first n elements after shuffled
-let selected = shuffled.slice(0, 5);
-
-let glutesGen = function (glute) {
-    let html = "";
-    html += '<li>' + selected + '</li>';
-    return html;
-}
-
-let addGeneratedList = function (glutes) {
-    let workout = document.getElementsByClassName('glutes');
-    workout.innerHTML = glutesGen(glutes);
-}
-
-$('#btn').click(function() {
-    $('#glutes').text(selected);
-});
-
-// console.log(glutesGen())
-console.log(selected);
-
-
-let tabata = [
+let tabatas = [
     {id: 1, name: "squat jumps", target: "lower body"},
     {id: 2, name: "push-ups", target: "upper body"},
     {id: 3, name: "burpees", target: "cardio"},
@@ -79,4 +43,40 @@ let tabata = [
     {id: 39, name: "windshield wiper", target: "core"},
     {id: 40, name: "single leg deadlift", target: "lower body"},
     {id: 41, name: "side plank", target: "core"},
-]
+];
+
+
+// Shuffle array
+const shuffled = tabatas.sort(() => 0.5 - Math.random());
+
+// Get sub-array of first n elements after shuffled
+let selected = shuffled.slice(0, 10);
+
+
+let tabatasGen = function () {
+    let html = '<div>';
+    html += '<p>' + selected[0].name + " " + selected[0].target + '</p>';
+    html += '<p>' + selected[1].name + " " + selected[1].target + '</p>';
+    html += '<p>' + selected[2].name + " " + selected[2].target + '</p>';
+    html += '<p>' + selected[3].name + " " + selected[3].target + '</p>';
+    html += '<p>' + selected[4].name + " " + selected[4].target + '</p>';
+    html += '<p>' + selected[5].name + " " + selected[5].target + '</p>';
+    html += '<p>' + selected[6].name + " " + selected[6].target + '</p>';
+    html += '<p>' + selected[7].name + " " + selected[7].target + '</p>';
+    html += '<p>' + selected[8].name + " " + selected[8].target + '</p>';
+    html += '<p>' + selected[9].name + " " + selected[9].target + '</p>';
+    html += '</div>';
+    $('#tabatas').html(html);
+}
+
+let addGeneratedList = function (tabatas) {
+    let workout = document.getElementsByClassName('tabatas');
+    workout.innerHTML = tabatasGen(tabatas);
+}
+
+$('#btn').click(function() {
+    $('#tabatas').text(tabatasGen());
+});
+
+
+console.log(selected[0].name, selected[1], selected[2]);
