@@ -2,17 +2,17 @@
 
 .heading {
     /*background-color: #F96900;*/
-    background-color: #1C3144;
-    color: white;
+    background-color: #F5F5F5;
+    color: #DCD756;
     font-family: 'Anton', sans-serif;
     /*font-size: 4em;*/
     text-align: center;
 }
 
 body {
-    background-color: #1C3144;
+    background-color: #F5F5F5;
 }
 
 .btn-color {
-   background-color: #F96900;
+   background-color: #B7D9DA;
 }
