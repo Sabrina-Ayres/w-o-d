@@ -54,8 +54,9 @@ let selected = shuffled.slice(0, 10);
 
 
 let tabatasGen = function () {
-    let html = '<div>';
-    html += '<p>' + selected[0].name + " " + selected[0].target + '</p>';
+    let html = '<div class="m-4">';
+    html += '<div class="row">' + '<div class="col-6">' + selected[0].name + '</div>' +
+        " " + '<div class="col-6">' + selected[0].target + '</div>'+ '</div>';
     html += '<p>' + selected[1].name + " " + selected[1].target + '</p>';
     html += '<p>' + selected[2].name + " " + selected[2].target + '</p>';
     html += '<p>' + selected[3].name + " " + selected[3].target + '</p>';
@@ -69,14 +70,16 @@ let tabatasGen = function () {
     $('#tabatas').html(html);
 }
 
-let addGeneratedList = function (tabatas) {
-    let workout = document.getElementsByClassName('tabatas');
-    workout.innerHTML = tabatasGen(tabatas);
-}
+// let addGeneratedList = function (tabatas) {
+//     let workout = document.getElementsByClassName('tabatas');
+//     workout.innerHTML = tabatasGen(tabatas);
+// }
 
 $('#btn').click(function() {
     $('#tabatas').text(tabatasGen());
 });
+
+
 
 
 console.log(selected[0].name, selected[1], selected[2]);
