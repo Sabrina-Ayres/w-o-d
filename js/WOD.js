@@ -55,17 +55,26 @@ let selected = shuffled.slice(0, 10);
 
 let tabatasGen = function () {
     let html = '<div class="m-4">';
-    html += '<div class="row">' + '<div class="col-6">' + selected[0].name + '</div>' +
-        " " + '<div class="col-6">' + selected[0].target + '</div>'+ '</div>';
-    html += '<p>' + selected[1].name + " " + selected[1].target + '</p>';
-    html += '<p>' + selected[2].name + " " + selected[2].target + '</p>';
-    html += '<p>' + selected[3].name + " " + selected[3].target + '</p>';
-    html += '<p>' + selected[4].name + " " + selected[4].target + '</p>';
-    html += '<p>' + selected[5].name + " " + selected[5].target + '</p>';
-    html += '<p>' + selected[6].name + " " + selected[6].target + '</p>';
-    html += '<p>' + selected[7].name + " " + selected[7].target + '</p>';
-    html += '<p>' + selected[8].name + " " + selected[8].target + '</p>';
-    html += '<p>' + selected[9].name + " " + selected[9].target + '</p>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[0].name + '</div>' +
+        " " + '<div class="col-3">' + selected[0].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[1].name + '</div>' +
+        " " + '<div class="col-3">' + selected[1].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[2].name + '</div>' +
+        " " + '<div class="col-3">' + selected[2].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[3].name + '</div>' +
+        " " + '<div class="col-3">' + selected[3].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[4].name + '</div>' +
+        " " + '<div class="col-3">' + selected[4].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[5].name + '</div>' +
+        " " + '<div class="col-3">' + selected[5].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[6].name + '</div>' +
+        " " + '<div class="col-3">' + selected[6].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[7].name + '</div>' +
+        " " + '<div class="col-3">' + selected[7].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[8].name + '</div>' +
+        " " + '<div class="col-3">' + selected[8].target + '</div>'+ '</div>';
+    html += '<div class="row m-2">' + '<div class="col-9">' + selected[9].name + '</div>' +
+        " " + '<div class="col-3">' + selected[9].target + '</div>'+ '</div>';
     html += '</div>';
     $('#tabatas').html(html);
 }
