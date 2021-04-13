@@ -1,6 +1,6 @@
 "use strict";
 
-
+// An Array of workout objects
 let tabatas = [
     {id: 1, name: "squat jumps", target: "lower body"},
     {id: 2, name: "push-ups", target: "upper body"},
@@ -53,31 +53,27 @@ const shuffled = tabatas.sort(() => 0.5 - Math.random());
 let selected = shuffled.slice(0, 10);
 
 
-let tabatasGen = function () {
-    let html = '<div class="m-4">';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[0].name + '</div>' +
-        " " + '<div class="col-3">' + selected[0].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[1].name + '</div>' +
-        " " + '<div class="col-3">' + selected[1].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[2].name + '</div>' +
-        " " + '<div class="col-3">' + selected[2].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[3].name + '</div>' +
-        " " + '<div class="col-3">' + selected[3].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[4].name + '</div>' +
-        " " + '<div class="col-3">' + selected[4].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[5].name + '</div>' +
-        " " + '<div class="col-3">' + selected[5].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[6].name + '</div>' +
-        " " + '<div class="col-3">' + selected[6].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[7].name + '</div>' +
-        " " + '<div class="col-3">' + selected[7].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[8].name + '</div>' +
-        " " + '<div class="col-3">' + selected[8].target + '</div>'+ '</div>';
-    html += '<div class="row m-2">' + '<div class="col-9">' + selected[9].name + '</div>' +
-        " " + '<div class="col-3">' + selected[9].target + '</div>'+ '</div>';
+function renderTabata(selected) {
+    // keeps h1 and p together
+    var html = '<div class="col d-inline-flex align-items-baseline mb-4">';
+    html += '<h2>' + selected.name + '</h2>';
+    html += '<p class="ml-2">' + selected.target + '</p>';
     html += '</div>';
+
+    return html;
+}
+
+
+function renderTheTabatas() {
+    var html = '';
+    for (var i = 0; i < 10; i++) {
+        html += renderTabata(tabatas[i]);
+    }
     $('#tabatas').html(html);
 }
+
+console.log(renderTheTabatas(selected));
+
 
 // let addGeneratedList = function (tabatas) {
 //     let workout = document.getElementsByClassName('tabatas');
