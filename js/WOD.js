@@ -1,7 +1,7 @@
 "use strict";
 
 // An Array of workout objects
-var tabatas = [
+let tabatas = [
     {id: 1, name: "squat jumps", target: "lower body"},
     {id: 2, name: "push-ups", target: "upper body"},
     {id: 3, name: "burpees", target: "cardio"},
@@ -54,7 +54,7 @@ var tabatas = [
 
 
 function renderTabata(selected) {
-    var html = '<div class="col d-inline-flex align-items-baseline mb-4">';
+    let html = '<div class="col d-inline-flex align-items-baseline mb-4">';
     html += '<h2>' + selected.name + '</h2>';
     html += '<p class="ml-2">' + selected.target + '</p>';
     html += '</div>';
@@ -65,15 +65,15 @@ function renderTabata(selected) {
 
 
 function renderTheTabatas() {
-    var shuffled = tabatas.sort(() => 0.5 - Math.random());
-    var selected = shuffled.slice(0, 10);
+    let shuffled = tabatas.sort(() => 0.5 - Math.random());
+    let selected = shuffled.slice(0, 10);
     console.log(shuffled);
     console.log(selected);
-    var html = '';
-    for (var i = 0; i < 10; i++) {
+    let html = '';
+    for (let i = 0; i < 10; i++) {
         html += renderTabata(selected[i]);
     }
-    // $('#tabatas').html(html);
+
     return html;
 }
 
