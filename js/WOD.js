@@ -1,7 +1,7 @@
 "use strict";
 
 // An Array of workout objects
-let tabatas = [
+var tabatas = [
     {id: 1, name: "squat jumps", target: "lower body"},
     {id: 2, name: "push-ups", target: "upper body"},
     {id: 3, name: "burpees", target: "cardio"},
@@ -47,44 +47,40 @@ let tabatas = [
 
 
 // Shuffle array
-const shuffled = tabatas.sort(() => 0.5 - Math.random());
+// const shuffled = tabatas.sort(() => 0.5 - Math.random());
 
 // Get sub-array of first n elements after shuffled
-let selected = shuffled.slice(0, 10);
+// let selected = shuffled.slice(0, 10);
 
 
 function renderTabata(selected) {
-    // keeps h1 and p together
     var html = '<div class="col d-inline-flex align-items-baseline mb-4">';
     html += '<h2>' + selected.name + '</h2>';
     html += '<p class="ml-2">' + selected.target + '</p>';
     html += '</div>';
+    html += '<hr>';
 
     return html;
 }
 
 
 function renderTheTabatas() {
+    var shuffled = tabatas.sort(() => 0.5 - Math.random());
+    var selected = shuffled.slice(0, 10);
+    console.log(shuffled);
+    console.log(selected);
     var html = '';
     for (var i = 0; i < 10; i++) {
-        html += renderTabata(tabatas[i]);
+        html += renderTabata(selected[i]);
     }
-    $('#tabatas').html(html);
+    // $('#tabatas').html(html);
+    return html;
 }
 
-console.log(renderTheTabatas(selected));
 
 
-// let addGeneratedList = function (tabatas) {
-//     let workout = document.getElementsByClassName('tabatas');
-//     workout.innerHTML = tabatasGen(tabatas);
-// }
-
-$('#btn').click(function() {
-    $('#tabatas').text(tabatasGen());
+$('#btn-gen').on('click', function() {
+    $('#tabatas').html(renderTheTabatas());
 });
 
 
-
-
-console.log(selected[0].name, selected[1], selected[2]);
