@@ -54,7 +54,7 @@ let tabatas = [
 
 
 function renderTabata(selected) {
-    let html = '<div class="col d-inline-flex align-items-baseline mb-4">';
+    let html = '<div class="col d-inline-flex align-items-baseline mb-3 mt-1">';
     html += '<h2>' + selected.name + '</h2>';
     html += '<p class="ml-2">' + selected.target + '</p>';
     html += '</div>';
