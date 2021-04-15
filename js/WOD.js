@@ -83,4 +83,7 @@ $('#btn-gen').on('click', function() {
     $('#tabatas').html(renderTheTabatas());
 });
 
+$('#regen').on('click', function() {
+    $('#tabatas').html(renderTheTabatas());
+});
 
