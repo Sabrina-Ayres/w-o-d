@@ -22,7 +22,7 @@
 
     <section>
 
-        <div class="card" style="width: 30em;">
+<!--        <div class="card" style="width: 30em;">-->
 
 <!--            <div class="col card-body">-->
 <!--                <h2 class="card-subtitle">8 rounds</h2>-->
@@ -37,11 +37,11 @@
             <!--                <p class="card-text">10 seconds of rest</p>-->
             <!--                <hr>-->
             <!--            </div>-->
-            <div class="modal" tabindex="-1" role="dialog" id="addModal">
+            <div class="modal" tabindex="-1" role="dialog" id="tabataModal">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
+                            <h5 class="modal-title">TabataWOD</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -50,8 +50,7 @@
                             <p id="tabatas"></p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Start Tabata</button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +63,8 @@
 
     <section>
         <span>
-            <a id="btn-gen" class="btn btn-generate btn-lg" href="#" role="button" data-toggle="modal" data-target="#addModal">Generate</a>
+            <a id="btn-gen" class="btn btn-generate btn-lg" href="#" role="button" data-toggle="modal"
+               data-target="#tabataModal">Generate</a>
         </span>
     </section>
 
