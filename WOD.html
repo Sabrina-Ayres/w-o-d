@@ -9,65 +9,66 @@
 </head>
 <body>
 
-<div class="bg"></div>
+<div class="bg">
 
-<header class="container">
-    <div class="jumbotron jumbotron-fluid heading">
-        <div class="container">
-            <h1>TabataWOD</h1>
-            <p>Tabata Generator</p>
+    <header class="container">
+        <div class="jumbotron-fluid heading">
+            <div class="container">
+                <h1 class="heading">TabataWOD</h1>
+                <p>Tabata Generator</p>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<main class="col">
+    <main class="col">
 
-    <section>
+        <section>
 
-        <!--        <div class="card" style="width: 30em;">-->
+            <!--        <div class="card" style="width: 30em;">-->
 
-        <!--            <div class="col card-body">-->
-        <!--                <h2 class="card-subtitle">8 rounds</h2>-->
-        <!--                <p class="card-text">20 seconds of work : 10 seconds of rest</p>-->
-        <!--                <hr>-->
-        <!--            </div>-->
+            <!--            <div class="col card-body">-->
+            <!--                <h2 class="card-subtitle">8 rounds</h2>-->
+            <!--                <p class="card-text">20 seconds of work : 10 seconds of rest</p>-->
+            <!--                <hr>-->
+            <!--            </div>-->
 
-        <div class="modal" tabindex="-1" role="dialog" id="tabataModal">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header text-center col">
-                        <h3 class="modal-title w-100">TabataWOD</h3>
-<!--                        <br>-->
-<!--                        <h5 class="w-100">8 Rounds</h5>-->
-<!--                        <br>-->
-<!--                        <p class="w-100">20 seconds of work</p>-->
-<!--                        <p class="w-100">10 seconds of rest</p>-->
-                    </div>
-                    <div class="modal-body">
-                        <p id="tabatas"></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-start-re">Start Tabata</button>
-                        <button id="regen" type="button" class="btn btn-start-re">Regenerate Tabata</button>
+            <div class="modal" tabindex="-1" role="dialog" id="tabataModal">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center col">
+                            <h3 class="modal-title w-100">TabataWOD</h3>
+                            <!--                        <br>-->
+                            <!--                        <h5 class="w-100">8 Rounds</h5>-->
+                            <!--                        <br>-->
+                            <!--                        <p class="w-100">20 seconds of work</p>-->
+                            <!--                        <p class="w-100">10 seconds of rest</p>-->
+                        </div>
+                        <div class="modal-body">
+                            <p id="tabatas"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-start-re">Start Tabata</button>
+                            <button id="regen" type="button" class="btn btn-start-re">Regenerate Tabata</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--            <div id="tabatas"></div>-->
+            <!--            <div id="tabatas"></div>-->
 
-        </div>
 
-    </section>
 
-    <section>
+</section>
+
+<section>
         <span>
             <a id="btn-gen" class="btn btn-generate btn-lg" href="#" role="button" data-toggle="modal"
                data-target="#tabataModal">Generate</a>
         </span>
-    </section>
+</section>
+
 
 </main>
-
+</div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
