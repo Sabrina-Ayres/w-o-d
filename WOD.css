@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap');
 
+
+body, html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("img/pexels-cottonbro-4753996.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .heading {
     /*background-color: #F96900;*/
     background-color: #F5F5F5;
@@ -7,10 +25,6 @@
     font-family: 'Anton', sans-serif;
     /*font-size: 4em;*/
     text-align: center;
-}
-
-body {
-    background-color: #F5F5F5;
 }
 
 .btn-generate {
