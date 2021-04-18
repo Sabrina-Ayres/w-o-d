@@ -78,7 +78,6 @@ function renderTheTabatas() {
 }
 
 
-
 $('#btn-gen').on('click', function() {
     $('#tabatas').html(renderTheTabatas());
 });
@@ -86,4 +85,14 @@ $('#btn-gen').on('click', function() {
 $('#regen').on('click', function() {
     $('#tabatas').html(renderTheTabatas());
 });
+
+
+// Script for Tabata Timer
+
+let interval;
+
+let workTime = 20;
+let breakTime = 10;
+
+
 
