@@ -92,7 +92,8 @@ $('#regen').on('click', function() {
 let interval;
 
 let workTime = 20;
-let breakTime = 10;
+let restTime = 10;
+
 
 
 
