@@ -90,10 +90,33 @@ $('#regen').on('click', function() {
 // Script for Tabata Timer
 
 let interval;
-
+let rest = true;
+let time = 20;
 let workTime = 20;
 let restTime = 10;
 
+function countdownWork() {
+    time -= 1;
+    checkForChange();
+}
 
+function checkForChange() {
+    if (time == 0 && rest == false) {
+        time = restTime + 1;
+        rest = true;
+        changeToRest();
+    } else if (time == 0 && rest == true) {
+        time = workTime + 1;
+        rest = false;
+        changeToWork();
+    }
+}
 
+function changeToRest() {
+
+}
+
+function  changeToWork() {
+
+}
 
