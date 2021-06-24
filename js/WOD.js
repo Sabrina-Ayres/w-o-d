@@ -78,51 +78,56 @@ function renderTheTabatas() {
 }
 
 
-$('#btn-gen').on('click', function() {
+$('#btn-gen').on('click', function () {
     $('#tabatas').html(renderTheTabatas());
 });
 
-$('#regen').on('click', function() {
+$('#regen').on('click', function () {
     $('#tabatas').html(renderTheTabatas());
 });
 
 
 // Script for Tabata Timer
 
-let interval;
-let rest = true;
-let time = 20;
-let workTime = 20;
-let restTime = 10;
+$('#startTabata').on('click', function () {
 
-startButton.onclick = function() {
-    rest = false;
-    changeToWork();
-    interval = setInterval(countdownWork, 1000);
-}
 
-function countdownWork() {
-    time -= 1;
-    checkForChange();
-}
+    let interval;
+    let rest = true;
+    let time = 20;
+    let workTime = 20;
+    let restTime = 10;
 
-function checkForChange() {
-    if (time == 0 && rest == false) {
-        time = restTime + 1;
-        rest = true;
-        changeToRest();
-    } else if (time == 0 && rest == true) {
-        time = workTime + 1;
+    startButton.onclick = function () {
         rest = false;
         changeToWork();
+        interval = setInterval(countdownWork, 1000);
     }
-}
 
-function changeToRest() {
+    function countdownWork() {
+        time -= 1;
+        checkForChange();
+    }
 
-}
+    function checkForChange() {
+        if (time == 0 && rest == false) {
+            time = restTime + 1;
+            rest = true;
+            changeToRest();
+        } else if (time == 0 && rest == true) {
+            time = workTime + 1;
+            rest = false;
+            changeToWork();
+        }
+    }
 
-function  changeToWork() {
+    function changeToRest() {
 
-}
+    }
+
+    function changeToWork() {
+
+    }
+
+})
 
