@@ -95,6 +95,12 @@ let time = 20;
 let workTime = 20;
 let restTime = 10;
 
+startButton.onclick = function() {
+    rest = false;
+    changeToWork();
+    interval = setInterval(countdownWork, 1000);
+}
+
 function countdownWork() {
     time -= 1;
     checkForChange();
