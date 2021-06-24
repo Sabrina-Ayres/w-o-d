@@ -36,7 +36,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" id="startTabata" data-dismiss="modal"
-                                    class="btn btn-start-re">Start Tabata</button>
+                                    class="btn btn-start-re" onclick="hideGo()">Start Tabata</button>
                             <button id="regen" type="button" class="btn btn-start-re">Regenerate Tabata</button>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="goBtn">
         <span>
             <a id="btn-gen" class="btn btn-generate btn-lg mt-3" href="#" role="button" data-toggle="modal"
                data-target="#tabataModal">GO!</a>

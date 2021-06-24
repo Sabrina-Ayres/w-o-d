@@ -89,14 +89,19 @@ $('#regen').on('click', function () {
 
 // Script for Tabata Timer
 
-$('#startTabata').on('click', function () {
+function hideGo() {
+    const hideDiv = document.getElementById('goBtn');
+    hideDiv.style.display = "hide";
+}
 
+$('#startTabata').on('click', function () {
 
     let interval;
     let rest = true;
     let time = 20;
     let workTime = 20;
     let restTime = 10;
+
 
     startButton.onclick = function () {
         rest = false;
