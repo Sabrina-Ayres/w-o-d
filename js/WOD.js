@@ -89,9 +89,13 @@ $('#regen').on('click', function () {
 
 // Script for Tabata Timer
 
-function hideGo() {
-    const hideDiv = document.getElementById('btn-gen');
-    hideDiv.style.display = "hide";
+// function hideGo() {
+//     const hideDiv = document.getElementById('btn-gen');
+//     hideDiv.style.display = "hide";
+// }
+
+function tabataTimer() {
+    document.getElementById('tabataTimer').style.display = "block";
 }
 
 $('#startTabata').on('click', function () {
